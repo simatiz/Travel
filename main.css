@@ -4,10 +4,8 @@ html{
 
 body{
     height: 100%;
-    width: 100%;
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 @font-face {
@@ -23,6 +21,10 @@ body{
 @font-face {
     font-family: 'Red Hat Text Light'; 
     src: url("Fonts/RedHatText-Light.ttf") format('truetype'); 
+}
+
+.container{
+    overflow-x: hidden !important;
 }
 
 h2{
@@ -102,11 +104,14 @@ h2{
     width: 100%;
     display: flex;
     flex-direction: row nowrap;
-    overflow: hidden;
     gap: 5%;
+    justify-content: center;
 }
 
 .destinations__destination{
+    display: grid;
+    align-items: end;
+
     max-width: 800px;
     width: 60%;
     height: 800px;
@@ -117,16 +122,31 @@ h2{
 }
 
 .d1{
-    /* margin-left: -41%; */
+    background-position: right;
     background-image: url('Images/spain.png');
 }
 
 .d2{
+    background-position: center;
     background-image: url('Images/japan.png');
 }
 
 .d3{
+    background-position: left;
     background-image: url('Images/usa.png');
+}
+
+.destination__text{
+    margin: 30px 15px;
+
+    font-family: 'Red Hat Text Regular';
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: rgba(255, 255, 255, 1);
 }
 
 .bottom{
