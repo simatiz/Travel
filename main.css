@@ -9,6 +9,13 @@ body{
     overflow-y: overlay;
 }
 
+select {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -ms-flexbox;
+};
+
 @font-face {
     font-family: 'Magra Bold';
     src: url("Fonts/Magra-Bold.ttf") format('truetype');
