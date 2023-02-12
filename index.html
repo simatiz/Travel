@@ -19,6 +19,8 @@
                     <div class="logo__text">Travel Portal</div>
                 </div>
 
+                <img class="burger-button" src="Images/burger-button__logo.png"></img>
+
                 <div class="header__bb">
                     <div class="cb"><a href="#stepss" class="header__b">How It Works</a></div>
                     <div class="cb"><a href="#" class="header__b">Plan Your Trip</a></div>
@@ -26,20 +28,84 @@
                     <div class="cb"><a href="#tss" class="header__b">Travel Stories</a></div>
                 </div>
 
-                <div class="blue-button__login" onclick="show('visible')">
+                <div class="blue-button__login" onclick="show('visible', login)">
                     <p class="bbl__text">Login</p>
                 </div>
+            </div>
 
-                <div aria-hidden="true">
-                    <div id="wrap" onclick="show('hidden')"></div>
+            <div aria-hidden="true">
+                <div id="wrap" onclick="hide_pop()"></div>
 
-                    <div class="pop-up" id="login">
-                        <p class="pop-up__title">Log in to your account</p>
+                <div class="pop-up" id="login">
+                    <p class="pop-up__title">Log in to your account</p>
+
+                    <a class="pop-up__facebook" href="#">
+                        <div class="facebook__logo"></div>
+                        <p class="facebook__text">Continue with Facebook</p>
+                    </a>
+
+                    <a class="pop-up__google" href="#">
+                        <div class="google__logo"></div>
+                        <p class="google__text">Continue with Google</p>
+                    </a>
+
+                    <div class="pop-up__or">
+                        <div class="or__line"></div>
+                        <p class="or__text">or</p>
+                        <div class="or__line"></div>
                     </div>
 
-                    <div class="pop-up" id="singup">
-                        <p class="pop-up__title">Create account</p>
+                    <div class="pop-up__input">
+                        <p class="input__text">E-mail</p>
+                        <form class="input__form">
+                            <input type="text" class="input__form-block">
+                        </form>
                     </div>
+
+                    <div class="pop-up__input">
+                        <p class="input__text">Password</p>
+                        <form class="input__form">
+                            <input type="text" class="input__form-block">
+                        </form>
+                    </div>
+
+                    <a class="pop-up__sign-button" href="#">Sign In</a>
+
+                    <a class="pop-up__link" href="#">Forgot Your Password?</a>
+
+                    <div class="pop-up__line"></div>
+
+                    <p class="pop-up__bottom-text">
+                        Don’t have an account?
+                        <a class="pop-up__link" onclick="show_singup()" href="#">Register</a>
+                    </p>
+                </div>
+
+                <div class="pop-up" id="singup">
+                    <p class="pop-up__title">Create account</p>
+
+                    <div class="pop-up__input">
+                        <p class="input__text">E-mail</p>
+                        <form class="input__form">
+                            <input type="text" class="input__form-block">
+                        </form>
+                    </div>
+
+                    <div class="pop-up__input">
+                        <p class="input__text">Password</p>
+                        <form class="input__form">
+                            <input type="text" class="input__form-block">
+                        </form>
+                    </div>
+
+                    <a class="pop-up__sign-button" href="#">Sign Up</a>
+
+                    <div class="pop-up__line"></div>
+
+                    <p class="pop-up__bottom-text">
+                        Already have an account?
+                        <a class="pop-up__link" onclick="show_login()" href="#">Log in</a>
+                    </p>
                 </div>
             </div>
 
@@ -48,8 +114,7 @@
                 <p class="explore-block__subtitle">Receive personalized recommendations for countries, hotels,
                     activities and more</p>
                 <form class="explore-block__search">
-                    <input type="text" id="explore_input" onkeyup="search_function()"
-                        placeholder="What would you like to do?" title="Type in a name">
+                    <input type="text" id="explore_input" placeholder="What would you like to do?">
 
                     <button class="blue-button" id="planning_button" type="submit" onclick>
                         <p class="bb__text">Start Planning</p>
@@ -68,21 +133,21 @@
                     <div class="step__rect">
                         <img class="steps__rect-img" src="Images/bicycle.png" alt="Bicycle">
                     </div>
-                    <p class="step__text">Tell us what you want to do</p>
+                    <p class="step__text" id="step1">Tell us what you want to do</p>
                 </div>
 
                 <div class="steps__step">
                     <div class="step__rect">
                         <img class="steps__rect-img" src="Images/calculator.png" alt="Calculator">
                     </div>
-                    <p class="step__text">Share us preferable dates</p>
+                    <p class="step__text" id="step2">Share us preferable dates</p>
                 </div>
 
                 <div class="steps__step">
                     <div class="step__rect">
                         <img class="steps__rect-img" src="Images/plane.png" alt="Plane">
                     </div>
-                    <p class="step__text">We will give you recommendations</p>
+                    <p class="step__text" id="step3">We will give you recommendations</p>
                 </div>
             </div>
 

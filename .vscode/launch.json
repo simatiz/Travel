@@ -7,7 +7,19 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
+            "name": "Chrome",
+            "file": "d:\\Front\\Git\\Travel\\Travel\\index.html"
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "name": "Firefox",
+            "file": "d:\\Front\\Git\\Travel\\Travel\\index.html"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Edge",
             "file": "d:\\Front\\Git\\Travel\\Travel\\index.html"
         }
     ]
